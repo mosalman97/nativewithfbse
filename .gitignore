@@ -33,7 +33,6 @@ local.properties
 *.hprof
 .cxx/
 
-ios/
 
 
 # node.js
