@@ -1,13 +1,29 @@
 import React, {useState} from 'react';
 import {View, Text, TextInput, Button} from 'react-native';
-import {InputItem, List} from '@ant-design/react-native';
 
-const LoginScreen = () => {
+// packages
+import {InputItem, List} from '@ant-design/react-native';
+import auth from '@react-native-firebase/auth';
+
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Handle login logic here
+  const loginAccount = (email, password) => {
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        console.log('user signed');
+      })
+      .catch(error => {
+        // if (error.code === 'auth/email-already-in-use') {
+        //   console.log();
+        // }
+        // if (error.code === 'auth/invalid-email') {
+        //   console.log('That email address is invalid!');
+        // }
+        console.log(error);
+      });
   };
 
   return (
@@ -28,9 +44,14 @@ const LoginScreen = () => {
           autoCapitalize="none"
         />
       </List>
-      <Button title="Login" onPress={handleLogin} />
+      <Button
+        title="Login"
+        onPress={() => {
+          loginAccount(email, password);
+        }}
+      />
     </View>
   );
 };
 
-export default LoginScreen;
+export default Login;

@@ -1,11 +1,13 @@
 import React from 'react';
 import {View, Text, SafeAreaView} from 'react-native';
-import LoginScreen from './src/components/screens/LoginScreen';
+import Login from './src/components/screens/Login';
+import Signup from './src/components/screens/Signup';
 
 function App() {
   return (
     <SafeAreaView>
-      <LoginScreen />
+      {/* <Signup /> */}
+      <Login />
     </SafeAreaView>
   );
 }
