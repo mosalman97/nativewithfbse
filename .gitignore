@@ -21,7 +21,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 ios/.xcode.env.local
-*.GoogleService-Info.plist
+
 
 # Android/IntelliJ
 #
@@ -32,21 +32,22 @@ local.properties
 *.iml
 *.hprof
 .cxx/
-*.GoogleService-Info.plist
+
+ios/
+
 
 # node.js
 #
 node_modules/
 npm-debug.log
 yarn-error.log
-*.GoogleService-Info.plist
+
 
 # BUCK
 buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
-*.GoogleService-Info.plist
 
 # fastlane
 #
