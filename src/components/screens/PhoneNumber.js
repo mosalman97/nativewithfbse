@@ -16,7 +16,8 @@ export default function PhoneNumber() {
   // should send phonenumber with countrycode
   async function signInWithPhoneNumber(phoneNumber) {
     const confirmation = await auth().signInWithPhoneNumber(phoneNumber);
-    console.log(confirmation, '++');
+    const {_verificationId} = confirmation;
+    console.log(_verificationId, '++');
   }
 
   // confirm otp function
