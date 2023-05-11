@@ -16,10 +16,16 @@ async function onDisplayNotification() {
   // Display a notification
   await notifee.displayNotification({
     title: 'Mosalman',
-    body: '',
+    body: 'hello hi',
     ios: {
       // iOS resource (.wav, aiff, .caf)
       sound: 'local.wav',
+      attachments: [
+        {
+          url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/1200px-Orange_logo.svg.png',
+          // thumbnailHidden: true,
+        },
+      ],
     },
     android: {
       channelId,
