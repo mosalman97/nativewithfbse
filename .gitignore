@@ -21,8 +21,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 ios/.xcode.env.local
-*.GoogleService-Info.plist
-*.text
+*.plist
 
 
 # Android/IntelliJ
