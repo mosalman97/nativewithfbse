@@ -22,7 +22,7 @@ DerivedData
 *.xcuserstate
 ios/.xcode.env.local
 *.GoogleService-Info.plist
-*.salman.text
+*.text
 
 
 # Android/IntelliJ
